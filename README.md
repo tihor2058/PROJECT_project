@@ -1,58 +1,66 @@
-# Shift Scheduler
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-![Home screen](docs/images/home-calendar.png?raw=true "Home screen")
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-A straightforward and efficient employee shift scheduler featuring a React frontend and a Java (Spring Boot) backend with PostgreSQL. This application allows you to manage employee schedules and other related entities.
+## About Laravel
 
-## Key Features
-- **User Management**: Manage and store users who can authenticate and use the platform (no permissions handling yet).
-- **Employee Management**: Manage and store employee records for specific customers.
-- **Customer Management**: Handle customer records and related data.
-- **Event Management**: Create, manage, and schedule events, including recurring events following the iCalendar standard.
-- **Event Reporting**: Generate event reports with ease.
-![Event report](docs/images/event-report.png?raw=true "Event report")
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Requirements
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-### Docker Version
-- Docker is the only requirement.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### Non-Docker Version
-- PostgreSQL (tested with v14, but likely compatible with other versions).
-- Apache Tomcat.
+## Learning Laravel
 
-## Quick Setup
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-The default admin user for both versions is `admin:admin`. Change the password within the application for better security.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-### Docker Version
-Launch the application quickly using the provided `docker-compose.yml` file with the command: `docker-compose up --build`. Customize the `.env` file as needed.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-### Non-Docker Version
-- Download the latest `war` file from Releases
-- Download the latest apache-tomcat software
-- Put the `war` file inside the tomcat webapps folder
-- Configure the `WEB-INF/classes/application.properties` as you wish
-- Start tomcat
+## Laravel Sponsors
 
-**Note**: Make sure the target database exists in your PostgreSQL instance; the required tables will be automatically created.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-## Technology Stack
+### Premium Partners
 
-- **Frontend**: Built using React with TypeScript, based on [react-admin](https://marmelab.com/react-admin/).
-- **Backend**: Developed with Java and Spring Boot.
-- **Calendar**: Utilizes the [fullcalendar](https://fullcalendar.io/) library.
-- **Security**: All server requests require authentication.
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-## Entity-Relationship Diagram
-![ER diagram](docs/images/er.png?raw=true "Entity-Relationship Diagram")
+## Contributing
 
-## Future Improvements
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-- Enforce constraints such as:
-  - Preventing schedule overlaps for the same employee.
-  - Dynamic handling of exclusion date-time slots during schedule creation or updates (e.g., exclude weekends).
-  - Ensuring end dates are later than start dates during schedule creation or updates.
-- Handle bulk updates and inserts.
-- Implement an entry clone action for schedules.
-- Enhance documentation and README.
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
